@@ -42,7 +42,7 @@ gpg --encrypt --sign --recipient test2@lol.txt test_note.txt
 
 5. decrypt
 
-to decrypt [the message](./test_note.txt.gpg) you have to share pub key too, so ensure exporting it first
+to be able to receive encrypted response to your [message](./test_note.txt.gpg) you have to share pub key too, so ensure exporting it first
 
 ```bash
 gpg --output test2pub.asc --export test2@lol.txt
