@@ -32,16 +32,6 @@ gpg --gen-key
 
 4. encrypt [the file](./test_note.txt)
 
-![](./note_contents.png)
-
-```bash
-gpg --encrypt --sign --recipient test2@lol.txt test_note.txt
-```
-
-![](./encrypted_message.png)
-
-5. decrypt
-
 to be able to encrypt [message](./test_note.txt.gpg) for test2, test2 have to provide his public key, so let's export it
 
 ```bash
@@ -66,7 +56,17 @@ gpg --list-keys
 
 ![](./list_keys.png)
 
-then decrypt
+now - encrypt the [message](./test_note.txt.gpg)
+
+![](./note_contents.png)
+
+```bash
+gpg --encrypt --sign --recipient test2@lol.txt test_note.txt
+```
+
+![](./encrypted_message.png)
+
+5. decrypt
 
 ```bash
 gpg --decrypt test_note.txt.gpg
